@@ -9,9 +9,15 @@ import SwiftUI
 
 @main
 struct AutoShowApp: App {
+    @AppStorage("isAuthenticated") var isAuthenticated = false
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if isAuthenticated {
+                HomeView()
+            } else {
+                AuthView()
+            }
         }
     }
 }
