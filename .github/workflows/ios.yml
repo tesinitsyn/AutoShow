@@ -33,7 +33,5 @@ jobs:
     - uses: actions/checkout@v4
     - name: Set up Xcode version
       run: sudo xcode-select -s /Applications/Xcode_16.1.app/Contents/Developer
-    - name: сhmod
-      run: chmod +x build_release.sh
     - name: Build
       run: set -o pipefail && xcodebuild -configuration Release -scheme $SCHEME -sdk iphoneos -destination 'platform=iOS' CODE_SIGNING_ALLOWED='NO'
