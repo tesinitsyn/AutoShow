@@ -34,4 +34,4 @@ jobs:
     - name: Set up Xcode version
       run: sudo xcode-select -s /Applications/Xcode_16.1.app/Contents/Developer
     - name: Build
-      run: set -o pipefail && xcodebuild -configuration Release -scheme AutoShow -sdk iphoneos -destination 'platform=iOS,name=iPhone 14' CODE_SIGNING_ALLOWED='NO'
+      run: set -o pipefail && xcodebuild -configuration Release -scheme AutoShow -sdk iphoneos -destination 'platform=iOS,name=iPhone 16' CODE_SIGNING_ALLOWED='NO'
